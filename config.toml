@@ -1,3 +1,51 @@
 baseURL = "/"
 title = "Westborough Amateur Hockey Association"
 languageCode = "en-us"
+paginate = 10
+
+[params]
+  org_name = "Westborough Amateur Hockey Association"
+  org_short = "WAHA"
+  donate_url = "https://example.com/donate"  # TODO: replace with Givebutter/Donorbox link
+  calendar_embed = "https://calendar.google.com/calendar/embed?src=YOUR_PUBLIC_CALENDAR_ID&mode=AGENDA"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Programs"
+    url = "/programs/"
+    weight = 2
+
+  [[menu.main]]
+    name = "News"
+    url = "/news/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Media"
+    url = "/media/"
+    weight = 4
+
+  [[menu.main]]
+    name = "Events"
+    url = "/events/"
+    weight = 5
+
+  [[menu.main]]
+    name = "Donate"
+    url = "/donate/"
+    weight = 6
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 7
+
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 8

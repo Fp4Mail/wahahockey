@@ -1,4 +1,35 @@
 {{ define "main" }}
-<h1>Welcome to WAHA</h1>
-<p>Site is deploying via Cloudflare Pages + Hugo.</p>
+<section class="hero">
+  <div class="container">
+    <h1>Building Westborough Hockey — from Learn‑to‑Play to Varsity</h1>
+    <p>WAHA is a volunteer‑run nonprofit supporting Westborough youth and high-school hockey with programs, ice time, equipment, and scholarships.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container grid grid-3">
+    <div class="card">
+      <h3>Next Events</h3>
+      <p>Auto-updated from our Google Calendar.</p>
+      <p><a href="/events/">See all events →</a></p>
+    </div>
+    <div class="card">
+      <h3>Latest News</h3>
+      <ul>
+        {{ range first 3 (where .Site.RegularPages "Section" "news") }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ else }}<li>No news yet. Check back soon.</li>{{ end }}
+      </ul>
+      <p><a href="/news/">All news →</a></p>
+    </div>
+    <div class="card">
+      <h3>Ways to Help</h3>
+      <ul>
+        <li><a href="/contact/">Volunteer</a></li>
+        <li><a href="/donate/">Donate</a></li>
+        <li><a href="/media/">Share photos & videos</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
 {{ end }}

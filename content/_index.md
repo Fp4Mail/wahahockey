@@ -2,4 +2,4 @@
 title: "Home"
 ---
 
-Welcome to the Westborough Amateur Hockey Association (WAHA)!
+Welcome to the Westborough Amateur Hockey Association!

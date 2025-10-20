@@ -1,0 +1,51 @@
+backend:
+  name: github
+  repo: Fp4Mail/wahahockey  # CHANGE if your repo name differs
+  branch: main
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "news"
+    label: "News"
+    folder: "content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Photo", name: "image", widget: "image", required: false}
+
+  - name: "media"
+    label: "Media"
+    folder: "content/media"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "body", widget: "markdown"}
+      - {label: "Link (YouTube or Google Photos)", name: "link", widget: "string", required: false}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "content/about.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/donate.md"
+        label: "Donate Page"
+        name: "donate"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      - file: "content/events.md"
+        label: "Events Page"
+        name: "events"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}

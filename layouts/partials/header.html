@@ -1,0 +1,12 @@
+<header>
+  <div class="container nav">
+    <div style="font-weight:700">{{ with .Site.Params.org_short }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</div>
+    <nav style="margin-left:auto;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center">
+      {{ $current := . }}
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" class="{{ if $current.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a>
+      {{ end }}
+      <a href="{{ .Site.Params.donate_url }}" class="btn" target="_blank" rel="noopener">Donate</a>
+    </nav>
+  </div>
+</header>
