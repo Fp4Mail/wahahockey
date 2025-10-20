@@ -1,7 +1,7 @@
 ---
-title: "Fall Jamboree Highlights"
-date: 2025-10-10
+title: "Fall Jamboree (Test Link)"
+date: 2024-12-18
 ---
 
 Watch the highlights on our playlist:
-https://www.youtube.com/playlist?list=YOUR_PLAYLIST_ID
+https://www.youtube.com/watch?v=xnFm7EYKPmM
