@@ -1,0 +1,4 @@
+baseURL = "https://wahahockey.org/"
+title = "Westborough Amateur Hockey Association"
+languageCode = "en-us"
+paginate = 10
