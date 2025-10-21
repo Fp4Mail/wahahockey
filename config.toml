@@ -8,6 +8,25 @@ paginate = 10
   org_short = "WAHA"
   donate_url = "https://example.com/donate"  # TODO: replace with Givebutter/Donorbox link
   calendar_embed = "https://calendar.google.com/calendar/embed?src=YOUR_PUBLIC_CALENDAR_ID&mode=AGENDA"
+  defaultTheme = "auto"  # light/dark based on user
+  disableThemeToggle = false
+
+  # Show hero section on the home page
+  ShowReadingTime = true
+  ShowShareButtons = true
+
+  # PaperMod home info mode
+  [params.homeInfoParams]
+    Title = "WAHA Hockey"
+    Content = "Youth hockey. Community. Development. **2025–26** season now open!"
+
+  # Optional: social icons under hero
+  [[params.socialIcons]]
+    name = "facebook"
+    url = "https://facebook.com/yourpage"
+  [[params.socialIcons]]
+    name = "mail"
+    url = "mailto:info@yourdomain"
 
 [menu]
   [[menu.main]]
