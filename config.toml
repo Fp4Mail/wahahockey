@@ -1,4 +1,4 @@
-baseURL = "HTTPS://WAHAHockey.org"
+baseURL = "https://www.wahahockey.org"
 title = "Westborough Amateur Hockey Association"
 languageCode = "en-us"
 paginate = 10
