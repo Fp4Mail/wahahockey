@@ -1,16 +1,15 @@
-/* ===== WAHA brand (burgundy, navy, white) — overrides on top of static/css/style.css ===== */
+/* WAHA brand (burgundy, navy, white) — layers on top of static/css/style.css */
 :root{
   --burgundy:#800020;
   --navy:#0a2342;
   --white:#ffffff;
 
-  /* theme hooks / fallbacks */
+  /* existing theme vars (used by your style.css) */
   --brand: var(--burgundy);
   --accent: var(--navy);
-  --text-on-dark: var(--white);
 }
 
-/* ===== Background: subtle burgundy→navy gradient (non-intrusive) ===== */
+/* Page background: subtle gradient */
 html,body{
   min-height:100%;
   background:
@@ -19,7 +18,7 @@ html,body{
     linear-gradient(180deg, color-mix(in srgb, var(--navy) 6%, transparent), transparent 30%);
 }
 
-/* ===== Header / Nav ===== */
+/* Header/nav: sticky, blur, depth */
 header{
   position: sticky; top: 0; z-index: 50;
   background: color-mix(in srgb, var(--navy) 75%, transparent);
@@ -27,40 +26,32 @@ header{
   box-shadow: 0 8px 24px rgba(0,0,0,0.12);
   border-bottom: none;
 }
-
-/* ensure header’s inner container aligns properly */
-header .container{
-  display:flex; align-items:center; gap:.75rem;
-}
-
-/* logo + title (works with the header partial we set up) */
-.logo-link{ display:flex; align-items:center; gap:.6rem; text-decoration:none; }
-.site-logo{ height:56px; width:auto; display:block; }
-.logo-text{ font-weight:800; font-size:1.1rem; line-height:1; color:var(--text-on-dark); }
-
-/* main nav (right side) */
-.nav{ gap:.5rem; }
 .nav a{
-  color: var(--text-on-dark);
-  font-weight:600;
-  text-underline-offset:6px;
-  padding:.25rem .35rem;
-  border-radius:.5rem;
-  transition:opacity .12s ease, background-color .12s ease, color .12s ease;
+  color: var(--white);
+  font-weight: 600;
+  text-underline-offset: 6px;
 }
 .nav a:hover{ text-decoration: underline; }
 
-/* active link highlight if your template sets .active */
-.nav a.active{
-  color: color-mix(in srgb, var(--white) 85%, var(--burgundy));
-  background: color-mix(in srgb, var(--burgundy) 20%, transparent);
+/* Hero band uses lighter gradient */
+.hero{
+  padding:3rem 0;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--burgundy) 6%, white), white 60%);
 }
 
-/* Donate / primary CTA lives as .nav a.btn in your theme */
+/* Cards → glassy + rounded */
+.card{
+  border: 1px solid rgba(10,35,66,0.08);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.10);
+}
+
+/* Buttons (your theme uses .nav a.btn for the CTA) */
 .nav a.btn{
   background: var(--burgundy);
   color: var(--white);
-  border-radius:999px;
+  border-radius: 999px;
   box-shadow: 0 10px 20px rgba(128,0,32,0.25);
   transform: translateY(0);
   transition: transform 120ms ease, box-shadow 200ms ease, background 150ms ease, opacity 120ms ease;
@@ -69,55 +60,13 @@ header .container{
   background: var(--navy);
   box-shadow: 0 16px 32px rgba(10,35,66,0.28);
   transform: translateY(-2px);
-  opacity:.97;
+  opacity: 0.97;
 }
 
-/* smaller logo & tighter spacing on phones */
-@media (max-width:600px){
-  .site-logo{ height:40px; }
-  header .container{ gap:.5rem; }
-}
-
-/* ===== Hero band (optional light section) ===== */
-.hero{
-  padding:3rem 0;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--burgundy) 6%, white), white 60%);
-}
-
-/* ===== Cards / content surfaces ===== */
-.card{
-  border: 1px solid rgba(10,35,66,0.08);
-  border-radius: 16px;
-  background: rgba(255,255,255,0.9);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.10);
-}
-
-/* dark-mode adjustment for cards (if user prefers dark) */
-@media (prefers-color-scheme: dark){
-  .card{
-    background: color-mix(in srgb, var(--navy) 80%, white 0%);
-    border-color: rgba(255,255,255,0.06);
-  }
-}
-
-/* ===== Links + accessibility focus ===== */
+/* Links + focus */
 a{ color: var(--burgundy); }
 a:hover{ color: color-mix(in srgb, var(--burgundy) 85%, black); }
-:focus-visible{
-  outline:3px solid var(--burgundy);
-  outline-offset:2px;
-  border-radius:6px;
-}
+:focus-visible{ outline:3px solid var(--burgundy); outline-offset:2px; border-radius:6px; }
 
-/* ===== Images: gentle rounding + soft shadow ===== */
+/* Images: soft rounding + shadow pop */
 img{ border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.08); }
-
-/* ===== Optional: super-subtle full-page ice texture (upload /static/images/ice-texture.webp first)
-body::before{
-  content:"";
-  position:fixed; inset:0; z-index:-1; pointer-events:none;
-  background-image:url("/images/ice-texture.webp");
-  background-size:cover; background-position:center; background-attachment:fixed;
-  opacity:.14;
-}
-*/
