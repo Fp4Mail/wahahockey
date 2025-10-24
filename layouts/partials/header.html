@@ -1,12 +1,23 @@
 <header>
-  <div class="container nav">
-    <div style="font-weight:700">{{ with .Site.Params.org_short }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</div>
-    <nav style="margin-left:auto;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center">
+  <div class="container nav" style="align-items:center;gap:.75rem">
+    <a href="/" class="logo-link" style="display:flex;align-items:center;gap:.5rem;text-decoration:none">
+      {{/* Allow a configurable logo path: params.logo, else default to /images/logo.png */}}
+      {{ $logo := or .Site.Params.logo "/images/logo.png" }}
+      <img src="{{ $logo }}" alt="{{ with .Site.Params.org_full }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }} logo"
+           class="site-logo" style="height:56px;width:auto;display:block" />
+      <span class="logo-text" style="font-weight:800;font-size:1.1rem;line-height:1;color:#fff">
+        {{ with .Site.Params.org_short }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}
+      </span>
+    </a>
+
+    <nav style="margin-left:auto;display:flex;gap:.5rem;flex-wrap:wrap;align-items:center">
       {{ $current := . }}
       {{ range .Site.Menus.main }}
-        <a href="{{ .URL }}" class="{{ if $current.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a>
+        <a href="{{ .URL }}" class="{{ if $current.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name | safeHTML }}</a>
       {{ end }}
-      <a href="{{ .Site.Params.donate_url }}" class="btn" target="_blank" rel="noopener">Donate</a>
+      {{ with .Site.Params.donate_url }}
+        <a href="{{ . }}" class="btn" target="_blank" rel="noopener">Donate</a>
+      {{ end }}
     </nav>
   </div>
 </header>
