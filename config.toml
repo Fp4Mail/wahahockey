@@ -10,6 +10,8 @@ paginate = 10
   calendar_embed = "https://calendar.google.com/calendar/embed?src=YOUR_PUBLIC_CALENDAR_ID&mode=AGENDA"
   defaultTheme = "auto"  # light/dark based on user
   disableThemeToggle = false
+  favicon = "/favicon.png"
+  images = ["/images/social-card.png"]
 
   # Show hero section on the home page
   ShowReadingTime = true
