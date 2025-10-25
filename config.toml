@@ -6,30 +6,39 @@ paginate = 10
 [params]
   org_name = "Westborough Amateur Hockey Association"
   org_short = "WAHA"
-  donate_url = "https://example.com/donate"  # TODO: replace with Givebutter/Donorbox link
+  description = "Supporting youth hockey development in Westborough, Massachusetts. Join our community-focused programs for players of all skill levels."
+  
+  # Donation configuration - Update this with your actual donation platform URL
+  # Popular options: Givebutter, Donorbox, PayPal Giving Fund
+  donate_url = "https://www.paypal.com/donate/?hosted_button_id=YOUR_BUTTON_ID"  # UPDATE THIS
+  
+  # Google Calendar embed (replace with your actual calendar ID)
   calendar_embed = "https://calendar.google.com/calendar/embed?src=YOUR_PUBLIC_CALENDAR_ID&mode=AGENDA"
-  defaultTheme = "auto"  # light/dark based on user
+  
+  # Theme settings
+  defaultTheme = "auto"  # light/dark based on user preference
   disableThemeToggle = false
   favicon = "/favicon.png"
   images = ["/images/social-card.png"]
 
-  # Show hero section on the home page
+  # Homepage settings
   ShowReadingTime = true
   ShowShareButtons = true
 
-  # PaperMod home info mode
+  # Homepage hero section
   [params.homeInfoParams]
-    Title = "WAHA Hockey"
-    Content = "Youth hockey. Community. Development. **2025–26** season now open!"
+    Title = "Westborough Amateur Hockey"
+    Content = "Building character through hockey. Supporting our community's young athletes with quality programs, coaching, and opportunities. **2025–26 season registration now open!**"
 
-  # Optional: social icons under hero
+  # Social media links (update with actual URLs)
   [[params.socialIcons]]
     name = "facebook"
-    url = "https://facebook.com/yourpage"
+    url = "https://facebook.com/wahahockey"  # UPDATE THIS
   [[params.socialIcons]]
     name = "mail"
-    url = "mailto:info@yourdomain"
+    url = "mailto:info@wahahockey.org"  # UPDATE THIS
 
+# Navigation menu
 [menu]
   [[menu.main]]
     name = "Home"
@@ -57,16 +66,11 @@ paginate = 10
     weight = 5
 
   [[menu.main]]
-    name = "Donate"
-    url = "/donate/"
-    weight = 6
-
-  [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 7
+    weight = 6
 
   [[menu.main]]
     name = "Contact"
     url = "/contact/"
-    weight = 8
+    weight = 7

@@ -9,6 +9,36 @@
   --accent: var(--navy);
 }
 
+/* Logo styling */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.logo-link:hover {
+  text-decoration: none;
+}
+.logo {
+  height: 80px;
+  width: auto;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.logo:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Responsive logo sizing */
+@media (max-width: 768px) {
+  .logo {
+    height: 65px;
+    max-width: 2200px;
+  }
+}
+
 /* Page background: subtle gradient */
 html,body{
   min-height:100%;

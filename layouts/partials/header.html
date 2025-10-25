@@ -1,6 +1,8 @@
 <header>
   <div class="container nav">
-    <div style="font-weight:700">{{ with .Site.Params.org_short }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</div>
+    <a href="/" class="logo-link">
+      <img src="/images/logo.jpg" alt="Westborough Amateur Hockey Association" class="logo" />
+    </a>
     <nav style="margin-left:auto;display:flex;gap:.25rem;flex-wrap:wrap;align-items:center">
       {{ $current := . }}
       {{ range .Site.Menus.main }}
