@@ -1,8 +1,9 @@
-
 backend:
   name: github
-  repo: Fp4Mail/wahahockey  # FIXED: Now matches your actual repo
+  repo: Fp4Mail/wahahockeyprod  # FIXED: Correct repo name
   branch: main
+  auth_type: implicit           # ADDED: GitHub OAuth
+  app_id: Ov23li4JiYlsbjCpz0b7  # ADDED: Your Client ID
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
@@ -95,8 +96,4 @@ collections:
         name: "contact"
         fields:
           - {label: "Page Title", name: "title", widget: "string"}
-          - {label: "Page Content", name: "body", widget: "markdown", hint: "Contact information, board members, key contacts"}
-
-# Show helpful editor interface
-publish_mode: editorial_workflow
-show_preview_links: true
+          -
