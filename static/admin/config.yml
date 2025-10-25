@@ -1,14 +1,13 @@
 backend:
   name: github
-  repo: Fp4Mail/wahahockey  # FIXED: Correct repo name
+  repo: Fp4Mail/wahahockey
   branch: main
-  auth_type: implicit           # ADDED: GitHub OAuth
-  app_id: Ov23li4JiYlsbjCpz0b7  # ADDED: Your Client ID
+  auth_type: implicit
+  app_id: Ov23li4JiYlsbjCpz0b7
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
 
-# Easy content management for volunteers
 collections:
   - name: "news"
     label: "📰 News Articles"
@@ -18,82 +17,110 @@ collections:
     editor:
       preview: true
     fields:
-      - {label: "Title", name: "title", widget: "string", hint: "Keep titles clear and engaging"}
-      - {label: "Publish Date", name: "date", widget: "datetime", default: "{{now}}"}
-      - {label: "Featured Image", name: "image", widget: "image", required: false, hint: "Upload a photo related to the article"}
-      - {label: "Summary", name: "description", widget: "string", required: false, hint: "Brief summary for social media sharing"}
-      - {label: "Article Content", name: "body", widget: "markdown", hint: "Write your article here. Use the toolbar for formatting."}
-      - {label: "Tags", name: "tags", widget: "list", required: false, hint: "Add relevant tags like 'clinic', 'tournament', 'registration'"}
+      - label: "Title"
+        name: "title"
+        widget: "string"
+        hint: "Keep titles clear and engaging"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+        default: "{{now}}"
+      - label: "Featured Image"
+        name: "image"
+        widget: "image"
+        required: false
+        hint: "Upload a photo related to the article"
+      - label: "Article Content"
+        name: "body"
+        widget: "markdown"
+        hint: "Write your article here. Use the toolbar for formatting."
 
   - name: "media"
     label: "📸 Media & Videos"
     folder: "content/media"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-      preview: true
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Date", name: "date", widget: "datetime", default: "{{now}}"}
-      - {label: "Type", name: "media_type", widget: "select", options: ["Photo Gallery", "Video", "Live Stream", "Highlights"], default: "Photo Gallery"}
-      - {label: "Description", name: "body", widget: "markdown", hint: "Describe what's in the photos/video"}
-      - {label: "YouTube Link", name: "youtube_url", widget: "string", required: false, hint: "Paste YouTube video URL here"}
-      - {label: "Google Photos Album", name: "photos_url", widget: "string", required: false, hint: "Link to Google Photos album"}
-      - {label: "Cover Image", name: "image", widget: "image", required: false}
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+        default: "{{now}}"
+      - label: "Description"
+        name: "body"
+        widget: "markdown"
+        hint: "Describe what's in the photos/video"
+      - label: "YouTube Link"
+        name: "youtube_url"
+        widget: "string"
+        required: false
+        hint: "Paste YouTube video URL here"
 
   - name: "events"
     label: "📅 Events & Games"
     folder: "content/events"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-      preview: true
     fields:
-      - {label: "Event Title", name: "title", widget: "string"}
-      - {label: "Event Date", name: "date", widget: "datetime"}
-      - {label: "Location", name: "location", widget: "string", hint: "Rink name and address"}
-      - {label: "Event Type", name: "event_type", widget: "select", options: ["Game", "Practice", "Tournament", "Clinic", "Meeting", "Fundraiser"]}
-      - {label: "Age Group", name: "age_group", widget: "string", required: false, hint: "e.g., U10, U12, All Ages"}
-      - {label: "Description", name: "body", widget: "markdown"}
-      - {label: "Registration Required?", name: "registration_required", widget: "boolean", default: false}
-      - {label: "Registration Link", name: "registration_url", widget: "string", required: false}
+      - label: "Event Title"
+        name: "title"
+        widget: "string"
+      - label: "Event Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Location"
+        name: "location"
+        widget: "string"
+        hint: "Rink name and address"
+      - label: "Description"
+        name: "body"
+        widget: "markdown"
 
   - name: "pages"
     label: "📄 Website Pages"
     files:
-      - file: "content/_index.md"
-        label: "🏠 Homepage"
-        name: "homepage"
-        fields:
-          - {label: "Page Title", name: "title", widget: "string"}
-          - {label: "Hero Title", name: "hero_title", widget: "string", hint: "Main headline on homepage"}
-          - {label: "Hero Description", name: "hero_description", widget: "text", hint: "Subtitle under main headline"}
-          - {label: "Page Content", name: "body", widget: "markdown"}
-
       - file: "content/about.md"
-        label: "ℹ️ About WAHA"
+        label: "About Page"
         name: "about"
         fields:
-          - {label: "Page Title", name: "title", widget: "string"}
-          - {label: "Page Content", name: "body", widget: "markdown", hint: "Tell the story of WAHA, our mission, and history"}
-
-      - file: "content/programs.md"
-        label: "🏒 Programs"
-        name: "programs"
-        fields:
-          - {label: "Page Title", name: "title", widget: "string"}
-          - {label: "Page Content", name: "body", widget: "markdown", hint: "Describe all hockey programs offered"}
-
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+      
       - file: "content/donate.md"
-        label: "💝 Donation Page"
+        label: "Donation Page"
         name: "donate"
         fields:
-          - {label: "Page Title", name: "title", widget: "string"}
-          - {label: "Page Content", name: "body", widget: "markdown", hint: "Explain how donations help and impact levels"}
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+      
+      - file: "content/programs.md"
+        label: "Programs Page"
+        name: "programs"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
 
       - file: "content/contact.md"
-        label: "📞 Contact Info"
+        label: "Contact Info"
         name: "contact"
         fields:
-          - {label: "Page Title", name: "title", widget: "string"}
-          -
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
