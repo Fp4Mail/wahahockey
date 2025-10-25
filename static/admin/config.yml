@@ -1,7 +1,7 @@
 # Decap CMS configuration for Cloudflare Pages + GitHub OAuth
 backend:
   name: github
-  repo: Fp4Mail/wahahockey.org   # <-- set to the correct owner/repo
+  repo: Fp4Mail/wahahockey   # <-- set to the correct owner/repo
   branch: main
   base_url: https://cms-oauth.wahahockey.org  # <-- your Cloudflare Worker (see README)
   auth_endpoint: auth
