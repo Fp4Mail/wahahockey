@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Fp4Mail/wahahockeyprod  # FIXED: Correct repo name
+  repo: Fp4Mail/wahahockey  # FIXED: Correct repo name
   branch: main
   auth_type: implicit           # ADDED: GitHub OAuth
   app_id: Ov23li4JiYlsbjCpz0b7  # ADDED: Your Client ID
