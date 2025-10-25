@@ -1,8 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Fp4Mail/wahahockeyprod
   branch: main
-
-site_url: https://wahahockey.org
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
