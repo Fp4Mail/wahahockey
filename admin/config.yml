@@ -1,9 +1,7 @@
 backend:
   name: github
-  repo: Fp4Mail/wahahockey  # UPDATE: Replace with your actual GitHub username/repo
+  repo: Fp4Mail/wahahockey  # FIXED: Now matches your actual repo
   branch: main
-
-# IMPORTANT: Update the repo name above with your actual GitHub repository
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
