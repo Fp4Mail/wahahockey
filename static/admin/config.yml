@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: Fp4Mail/wahahockeyprod
+  repo: Fp4Mail/wahahockey
   branch: main
 
 media_folder: "static/uploads"
