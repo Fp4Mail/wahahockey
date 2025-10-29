@@ -1,6 +1,6 @@
 ---
-title: "Goalie Clinic Recap"
+title: New Season2025/2026 Schedule
 date: 2025-10-18
+image: /uploads/hockeyschedule25.jpg
 ---
-
-Huge thanks to our volunteer coaches and families for a great clinic. Photos are in the Media section.
+Excited to announce that the 2025/2026 Westborough Hockey schedule has been posted
