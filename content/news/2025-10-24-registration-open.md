@@ -1,5 +1,5 @@
 ---
-title: 2025-26 Season Registration Now Open!
+title: TBD Season Registration Now Open!
 date: 2025-10-24T10:00:00-04:00
 description: Join WAHA for another exciting season of youth hockey. Early bird
   registration ends November 15th.
@@ -19,9 +19,9 @@ We're excited to announce that registration for the **2025-26 WAHA hockey season
 
 ### Programs Available
 
-* **Learn to Skate** (Ages 4-7) - $150
-* **House League** (Ages 8-14) - $300  
-* **Travel Teams** (Ages 10-16) - $600
+* **Learn to Skate** (Ages 4-7) - $
+* **House League** (Ages 8-14) - $
+* **Travel Teams** (Ages 10-16) - $
 
 *Early bird discount: Save $50 on House League and Travel Team registration!*
 
